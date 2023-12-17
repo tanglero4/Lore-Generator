@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>AI Lore Generator</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     <main>
 <form id="lore-form">
     <input type="text" placeholder="Reveal the mystical lore you wish to uncover."
-    autofocus required autocomplete="off" class="user-input">
+    autofocus required autocomplete="off" class="user-input" id="user-input">
     <input type="submit" class="submit-button" />
 </form>
     </main>
