@@ -16,11 +16,13 @@ let context= "You are an expert writer like J.R Tolkien and love to write short 
 let prompt= `user instructions: Generate a lore about ${userInput.value}`;
 let apiURL= `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+let loreSection= document.querySelector("#lore");
+loreSection.classList.remove("hidden");
+loreSection.innerHTML=`Generating lore about ${userInput.value}`
+
 axios.get(apiURL).then(displayLore);
-console.log(`Lore generating about ${userInput.value}`)
+
 }
-
-
 
 let loreForm= document.querySelector("#lore-form");
 loreForm.addEventListener("submit",generateLore);
